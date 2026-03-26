@@ -1,12 +1,13 @@
+// src/components/AddEvent.js
 import { useState } from "react";
 
 function AddEvent({ onAdd }) {
   const [name, setName] = useState("");
 
   const handleAdd = () => {
-    if (!name) return;       // mos lejoi bosh
-    onAdd(name);              // thërret funksionin nga Dashboard
-    setName("");              // pastro inputin
+    if (!name) return; // mos lejo event bosh
+    onAdd(name);        // thërret funksionin nga Dashboard
+    setName("");        // pas shtimit e pastron inputin
   };
 
   return (
